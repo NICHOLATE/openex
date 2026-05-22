@@ -1,12 +1,13 @@
 package backend.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
-@Entity
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 @Table(name = "users")
 public class User {
 
@@ -14,7 +15,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
-
+    private String name;
+    private String surname;
     private String email;
+    private String password;
 }
