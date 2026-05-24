@@ -19,4 +19,9 @@ public class User {
     private String surname;
     private String email;
     private String password;
+    private String phoneNumber;
+    private String jobType;
+    private String hobbies;
+    private String employmentStatus;
+    private String incomeType;
 }

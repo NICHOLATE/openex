@@ -27,9 +27,13 @@ public class UserController {
         user.setSurname(request.getLastName());
         user.setEmail(request.getEmail());
 
-        // hash password
-        String hashedPassword = passwordEncoder.encode(request.getPassword());
-        user.setPassword(hashedPassword);
+        user.setPhoneNumber(request.getPhoneNumber());
+        user.setJobType(request.getJobType());
+        user.setHobbies(request.getHobbies());
+        user.setEmploymentStatus(request.getEmploymentStatus());
+        user.setIncomeType(request.getIncomeType());
+
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
 
         return userRepository.save(user);
     }
